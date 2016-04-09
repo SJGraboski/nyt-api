@@ -31,7 +31,7 @@ prompt.get(["Search"], function(err, result){
 		fs.readFile('nyt.json','utf-8', function(error, data){
 	    if (error) throw error;
 	    console.log('callback ok');
-	    data = JSON.parse(data);
+	    // data = JSON.parse(data);
 	    http.createServer(function (request, response) {
 		    response.writeHead(200, {'Content-Type': 'text/plain'});
 		    response.end(data);
