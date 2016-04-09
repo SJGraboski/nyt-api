@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SJGraboski/nyt-api#readme",
   "dependencies": {
+    "http": "0.0.0",
     "prompt": "^1.0.0",
     "request": "^2.70.0"
   }
