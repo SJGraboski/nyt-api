@@ -33,7 +33,7 @@ prompt.get(["Search"], function(err, result){
 	    if (error) throw error;
 	    console.log('callback ok');
 		});
-		open(NYTURL,'chrome');
+		open(NYTURL);
 	})
 prompt.stop();
 });
