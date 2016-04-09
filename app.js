@@ -5,10 +5,10 @@ var fs = require('fs');
 var prompt = require('prompt');
 var request = require('request');
 var http = require('http');
-var open = require('open');
+// var open = require('open');
 
 // write file
-var w_file = "nyt.html";
+var w_file = "nyt.json";
 var userInput = process.argv[2];
 
 /* 1: Prompt */
@@ -36,6 +36,7 @@ prompt.get(["Search"], function(err, result){
 		    response.writeHead(200, {'Content-Type': 'text/plain'});
 		    response.end(data);
 			}).listen(8080);
+			require("openurl").open('http://127.0.0.1:8080')
 		});
 	})
 prompt.stop();
