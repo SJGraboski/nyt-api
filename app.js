@@ -4,11 +4,11 @@
 var fs = require('fs');
 var prompt = require('prompt');
 var request = require('request');
-// var http = require('http');
+var http = require('http');
 var open = require('open');
 
 // write file
-var w_file = "nyt.json";
+var w_file = "nyt.html";
 var userInput = process.argv[2];
 
 /* 1: Prompt */
@@ -32,8 +32,11 @@ prompt.get(["Search"], function(err, result){
 		fs.readFile('nyt.json','utf-8', function(error, data){
 	    if (error) throw error;
 	    console.log('callback ok');
+	    http.createServer(function (request, response) {
+		    response.writeHead(200, {'Content-Type': 'text/plain'});
+		    response.end(data);
+			}).listen(8080);
 		});
-		open(NYTURL);
 	})
 prompt.stop();
 });
