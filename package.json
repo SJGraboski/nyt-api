@@ -1,0 +1,23 @@
+{
+  "name": "nyt-api",
+  "version": "1.0.0",
+  "description": "group project RCB '16",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SJGraboski/nyt-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SJGraboski/nyt-api/issues"
+  },
+  "homepage": "https://github.com/SJGraboski/nyt-api#readme",
+  "dependencies": {
+    "prompt": "^1.0.0",
+    "request": "^2.70.0"
+  }
+}
